@@ -4,35 +4,42 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#313481"
+    android:background="#AAAAB3"
+    android:gravity="center"
+    android:orientation="vertical"
     tools:context=".MainActivity">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
     <Button
+        android:id="@+id/loginButtonId"
+        android:layout_margin="5dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/button_name"
-        android:textSize="20sp"
+        android:drawableLeft="@drawable/login"/>
 
         />
-    <ScrollView
-        android:padding="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <TextView
-          android:padding="30dp"
-            android:id="@+id/nameTextViewId"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/large_text"
-            android:textSize="18sp"
-            android:textColor="#F3EFEF"
-            android:textIsSelectable="true"
-            android:textColorHighlight="@color/colorAccent"
-
-            />
+    <Button
+        android:id="@+id/logoutButtonId"
+        android:layout_margin="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="logOut"
+        android:textAllCaps="false"
+        />
 
 
-    </ScrollView>
+        </LinearLayout>
+
+    <TextView
+        android:id="@+id/textViewId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
 
 
 </LinearLayout>
