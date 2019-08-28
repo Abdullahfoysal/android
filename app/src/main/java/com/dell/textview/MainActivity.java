@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener{
     int count=0;
     private Button loginButton,logoutButton;
     private TextView textView;
@@ -22,19 +22,16 @@ public class MainActivity extends AppCompatActivity {
         textView =(TextView) findViewById(R.id.textViewId);
         logoutButton =(Button) findViewById(R.id.logoutButtonId);
 
-        loginButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+        logoutButton.setOnClickListener(this);
+        loginButton.setOnClickListener(this);
 
-                textView.setText("Login button is clicked"+ ++count + "Times");
-                textView.setTextColor(Color.RED);
-            }
-        });
-        logoutButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                textView.setText("Logout button clicked ");
-            }
-        });
+    }
+
+    @Override
+    public void onClick(View v) {
+        if(v.getId()==R.id.loginButtonId)
+        textView.setText("Login Button");
+        if(v.getId()==R.id.logoutButtonId)
+        textView.setText("Logout Button");
     }
 }
