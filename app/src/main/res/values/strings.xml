@@ -13,6 +13,7 @@
     <string name="button_name">Login</string>
     <string name="editText1_text">Email</string>
     <string name="editText2_text">Password</string>
+    <string name="toastButtonText">Toast</string>
 
 
 </resources>

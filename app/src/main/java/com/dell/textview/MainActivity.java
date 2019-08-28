@@ -7,7 +7,9 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
 import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -18,6 +20,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button loginButton,logoutButton;
     private TextView textView;
     private EditText editText1,editText2;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,27 +53,42 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
-        String number1=editText1.getText().toString();
-        String number2=editText2.getText().toString();
+        try{
+            String number1=editText1.getText().toString();
+            String number2=editText2.getText().toString();
 
-        //convert to double
-        double num1,num2;
-        if(!number1.isEmpty()) {
-             num1 = Double.parseDouble(number1);
+            //convert to double
+            double num1,num2;
+
+            num1 = Double.parseDouble(number1);
             num2 = Double.parseDouble(number2);
-        }
-        else {num1=0.0;num2=0.0;}
 
-        if(v.getId()==R.id.loginButtonId)
-        {
-            double sum=num1+num2;
-            textView.setText("Result ="+sum);
+
+
+            if(v.getId()==R.id.loginButtonId)
+            {
+                double sum=num1+num2;
+                textView.setText("Result ="+sum);
+            }
+            if(v.getId()==R.id.logoutButtonId)
+            {
+                double sub=num1-num2;
+                textView.setText("Result ="+sub);
+            }
         }
-        if(v.getId()==R.id.logoutButtonId)
-        {
-            double sub=num1-num2;
-            textView.setText("Result ="+sub);
+        catch(Exception e){
+           // Toast.makeText(MainActivity.this,"Please Enter number",Toast.LENGTH_SHORT).show();
+            LayoutInflater inflater =getLayoutInflater();
+            View customToastView=inflater.inflate(R.layout.customtoast_layer, (ViewGroup) findViewById(R.id.customtoastId));
+            Toast toast=new Toast(MainActivity.this);
+            toast.setDuration(Toast.LENGTH_SHORT);
+            toast.setGravity(Gravity.CENTER,0,0);
+            toast.setView(customToastView);
+            toast.show();
+
+
         }
+
 
     }
 }
