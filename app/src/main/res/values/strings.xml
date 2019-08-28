@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">TextView</string>
+    <string name="name_text">Abdullah Al foysal."</string>
+    <string name="age_text">22 Years Old</string>
+    <string name="large_text">I am foysal.I\'m from Gazipur,Dhaka Division.
+    he input begins with a single positive integer on a line by itself indicating the number of the casesfollowing,
+        each of them as described below. This line is followed by a blank line, and there is also ablank line between two consecutive inputs.Each input set will contain two positive integers, each on a separate line.
+        The first integer is theAmp\nlitude;
+        he input begins with a single positive integer on a line by itself indicating the number of the casesfollowing, each of them as described below. This line is followed by a blank line, and there is also ablank line between two consecutive inputs.Each input set will contain two positive integers, each on a separate line.
+        he input begins with a single positive integer on a line by itself indicating the number of the casesfollowing, each of them as described below. This line is followed by a blank line, and there is also ablank line between two consecutive inputs.Each input set will contain two positive integers,
+        he input begins with a single positive integer on a line by itself indicating the number of the casesfollowing, each of them as described below. This line is followed by a blank line, and there is also ablank line between two consecutive inputs.Each input set will contain two positive integers,
+        each on a separate line. The first integer is theAmplitude; the second integer is the Frequencyeach on a separate line. The first integer is theAmplitude; the second integer is the FrequencyThe first integer is theAmplitude; the second integer is the Frequencythe second integer is the Frequency</string>
+    <string name="button_name">Login</string>
+    <string name="editText1_text">Email</string>
+    <string name="editText2_text">Password</string>
+    <string name="toastButtonText">Toast</string>
+
+
+</resources>
