@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
@@ -31,11 +32,9 @@ public class MainActivity extends AppCompatActivity {
 
         public void showMessage(View v) {
             if(v.getId()==R.id.loginButtonId)
-                Toast.makeText(MainActivity.this,"Login Button",Toast.LENGTH_LONG).show();
+                Log.d("tag","Login button is clicked");
             if(v.getId()==R.id.logoutButtonId) {
-                Toast toast=Toast.makeText(MainActivity.this,"Logout Button",Toast.LENGTH_SHORT);
-                toast.setGravity(Gravity.CENTER,10,300);
-                toast.show();
+                Log.d("tag","Logout button is clicked");
             }
         }
 
